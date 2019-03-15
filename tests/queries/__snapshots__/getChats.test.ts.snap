@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Query.chats should fetch all chats 1`] = `
+Object {
+  "chats": Array [
+    Object {
+      "id": "1",
+      "lastMessage": Object {
+        "content": "You on your way?",
+        "createdAt": "2019-03-12T13:24:18.174Z",
+        "id": "1",
+      },
+      "name": "Ethan Gonzalez",
+      "picture": "https://randomuser.me/api/portraits/thumb/men/1.jpg",
+    },
+    Object {
+      "id": "2",
+      "lastMessage": Object {
+        "content": "Hey, it's me",
+        "createdAt": "2019-03-11T20:44:18.174Z",
+        "id": "2",
+      },
+      "name": "Bryan Wallace",
+      "picture": "https://randomuser.me/api/portraits/thumb/men/2.jpg",
+    },
+    Object {
+      "id": "3",
+      "lastMessage": Object {
+        "content": "I should buy a boat",
+        "createdAt": "2019-02-24T14:04:18.174Z",
+        "id": "3",
+      },
+      "name": "Avery Stewart",
+      "picture": "https://randomuser.me/api/portraits/thumb/women/1.jpg",
+    },
+    Object {
+      "id": "4",
+      "lastMessage": Object {
+        "content": "This is wicked good ice cream.",
+        "createdAt": "2018-07-22T22:04:18.174Z",
+        "id": "4",
+      },
+      "name": "Katie Peterson",
+      "picture": "https://randomuser.me/api/portraits/thumb/women/2.jpg",
+    },
+  ],
+}
+`;

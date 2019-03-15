@@ -1,0 +1,38 @@
+{
+  "name": "whatsapp-clone-server",
+  "description": "A newly created Tortilla project",
+  "private": true,
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/body-parser": "1.17.0",
+    "@types/cors": "2.8.4",
+    "@types/express": "4.16.1",
+    "@types/graphql": "14.0.7",
+    "@types/graphql-iso-date": "3.3.1",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.0",
+    "ts-jest": "24.0.0",
+    "jest": "24.5.0",
+    "ts-node": "8.0.3",
+    "typescript": "3.3.3333"
+  },
+  "dependencies": {
+    "apollo-server-express": "2.4.8",
+    "apollo-server-testing": "2.4.8",
+    "body-parser": "1.18.3",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "graphql": "14.1.1",
+    "graphql-import": "0.7.1",
+    "graphql-iso-date": "3.6.1",
+    "graphql-tools": "4.0.4"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/ts-jest"
+    }
+  }
+}
