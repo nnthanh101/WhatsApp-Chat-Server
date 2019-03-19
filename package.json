@@ -1,10 +1,10 @@
 {
-  "name": "whatsapp-server-express",
-  "description": "A newly created Tortilla project",
+  "name": "whatsapp-chat-server",
+  "description": "WhatsApp-Like Server using React (hooks & suspense) that connect to WhatsApp-Clone-Server using GraphQL & Apollo.",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://Urigo@github.com/Urigo/WhatsApp-Clone-Server.git"
+    "url": "https://github.com/vbosstech/WhatsApp-Chat-Server.git"
   },
   "scripts": {
     "build": "tsc",
