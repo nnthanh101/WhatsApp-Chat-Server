@@ -7,13 +7,11 @@ import {
   ManyToMany,
   ManyToOne,
   CreateDateColumn
-} from "typeorm";
-import { Message } from "./Message";
-import { User } from "./User";
-import { Recipient } from "./Recipient";
+} from 'typeorm';
+import { Message } from './Message';
+import { User } from './User';
 
 interface ChatConstructor {
-  createdAt?: Date,
   name?: string;
   picture?: string;
   allTimeMembers?: User[];
@@ -60,13 +58,7 @@ export class Chat {
   @OneToMany(type => Message, message => message.chat, {cascade: ["insert", "update"], eager: true})
   messages: Message[];
 
-  @OneToMany(type => Recipient, recipient => recipient.chat)
-  recipients: Recipient[];
-
-  constructor({createdAt, name, picture, allTimeMembers, listingMembers, actualGroupMembers, admins, owner, messages}: ChatConstructor = {}) {
-    if (createdAt) {
-      this.createdAt = createdAt;
-    }
+  constructor({name, picture, allTimeMembers, listingMembers, actualGroupMembers, admins, owner, messages}: ChatConstructor = {}) {
     if (name) {
       this.name = name;
     }

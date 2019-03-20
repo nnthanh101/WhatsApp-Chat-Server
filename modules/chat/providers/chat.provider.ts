@@ -142,30 +142,26 @@ export class ChatProvider {
     return chat || null;
   }
 
-  async updateGroup(
+  async updateChat(
     chatId: string,
     {
-      groupName,
-      groupPicture,
+      name,
+      picture,
     }: {
-      groupName?: string
-      groupPicture?: string
+      name?: string
+      picture?: string
     } = {},
   ) {
     const chat = await this.createQueryBuilder()
       .whereInIds(chatId)
       .getOne();
 
-    if (!chat) {
-      throw new Error(`The chat ${chatId} doesn't exist.`);
-    }
+    if (!chat) return null;
+    if (!chat.name) return chat;
 
-    if (!chat.name) {
-      throw new Error(`The chat ${chatId} is not a group.`);
-    }
-
-    chat.name = groupName || chat.name;
-    chat.picture = groupPicture || chat.picture;
+    name = name || chat.name;
+    picture = picture || chat.picture;
+    Object.assign(chat, { name, picture });
 
     // Update the chat
     await this.repository.save(chat);
@@ -175,7 +171,7 @@ export class ChatProvider {
       chatUpdated: chat,
     });
 
-    return chat;
+    return chat || null;
   }
 
   async removeChat(chatId: string) {
